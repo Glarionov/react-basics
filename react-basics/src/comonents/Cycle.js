@@ -1,17 +1,29 @@
 import React from 'react'
 
-class Ifer extends React.Component {
+/**
+ * Показ списка
+ *
+ * Подробнее об этом почитать здесь
+ * https://learn-reactjs.ru/basics/lists-and-keys
+ */
+class Cycle extends React.Component {
     render () {
         return (
             <div>
                 <p>
                     Мои любимые числа:
                 </p>
+                {/**
+                    Так можно отобразить список, записанный с помощью [квадратных скобок]
+                */}
                 {this.state.loveNumbers.map(
                     (number) =>
                         <div key={number}>Я люблю число {number}</div>
                 )}
                 <p>Мои любимые животные:</p>
+                {/**
+                    Так можно отображить список, записанный с помощью {фигурных скобок}
+                 */}
                 {Object.entries(this.state.animals).map(([index, animal]) => (
                     <div key={index}>
                         {animal.name}
@@ -32,13 +44,6 @@ class Ifer extends React.Component {
             }
         };
     }
-
-    onChangeInput(event) {
-        let name = event.target.name;
-        let value = event.target.value;
-        this.setState({[name]: value});
-    }
-
 }
 
-export default Ifer;
+export default Cycle;

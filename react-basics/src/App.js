@@ -3,6 +3,7 @@ import './App.css';
 import Counter1 from "./comonents/Counter1";
 import Ifer from "./comonents/Ifer";
 import Cycle from "./comonents/Cycle";
+import SimpleComments from "./comonents/SimpleComments";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Ifer/>
         <hr/>
       <Cycle/>
+        <hr/>
+        <SimpleComments/>
     </div>
   );
 }

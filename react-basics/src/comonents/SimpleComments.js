@@ -20,7 +20,7 @@ class SimpleComment extends React.Component {
 
                 {this.state.comments.map(
                     (comment) =>
-                        <div key={comment.id}>Я люблю число {comment.text}</div>
+                        <div key={comment.id}>{comment.text}</div>
                 )}
             </div>
         )
